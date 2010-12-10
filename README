@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3356
+
+yet another redmine clinet.
+
+dev : https://github.com/basyura/unite-yarm
+
+redmine client which use rest api.
+
+you can view ticket's list.
+you can update ticket's description and field.
