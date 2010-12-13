@@ -1,10 +1,59 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3356
 
-yet another redmine clinet.
+unite-yarm is a unite.vim plugin for redmine
 
 dev : https://github.com/basyura/unite-yarm
 
-redmine client which use rest api.
+
+this is a redmine client which use REST api.
 
 you can view ticket's list.
 you can update ticket's description and field.
+http://d.hatena.ne.jp/basyura/20101125/p1
+
+dependency
+
+  unite.vim
+  https://github.com/Shougo/unite.vim
+
+  webapi-vim 
+  https://github.com/mattn/webapi-vim
+
+  open-browser.vim
+  https://github.com/tyru/open-browser.vim
+
+Usage:
+  
+  :Unite redmine
+  :Unite redmine:project_id=hoge:status_id=open:per_page=100
+  :Unite redmine:project=hoge:status=open:per_page=100
+  :Unite redmine:!
+  
+change description ,  and save buffer by :w
+issue is updated.
+  
+variables
+
+  g:unite_yarm_server_url
+    redmine server url
+    default ：http://localhost:3000
+    example) let g:unite_yarm_server_url = 'http://localhost:3000'
+    
+  g:unite_yarm_access_key
+    API Access Key
+    you need key to update issue
+   default : read only
+   example) let g:unite_yarm_access_key = 'XXXXXXXXXXXXXXX'
+
+  g:unite_yarm_per_page
+    25 or 50 or 100
+    default : 25
+    example) let g:unite_yarm_per_page = 25
+  
+  g:unite_yarm_backup_dir
+    backup ticket's description
+    default : no backup
+    example) let g:unite_yarm_backup_dir = '/tmp'
+
+
+
